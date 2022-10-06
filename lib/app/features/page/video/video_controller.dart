@@ -8,6 +8,12 @@ class VideoController extends GetxController {
   var video = <Video>[].obs;
   var isLoading = false.obs;
 
+  var videoPlayId = ''.obs;
+
+  void updatevideoPlayId(String id) {
+    videoPlayId(id);
+  }
+
   void updateVideo(index) {
     selectedVideo(index);
   }

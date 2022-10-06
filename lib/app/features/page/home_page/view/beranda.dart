@@ -9,8 +9,9 @@ class Beranda extends StatelessWidget {
   final List<ArticleModels> articleAqidahPopuler = [
     ArticleModels(
         content:
-            'gdgfhdgh fgfgfrdgfsgf hdgfdxgnfbvcxdgzfd dhdfgfg fgdfgfgf fgfgfg',
-        title: 'article1',
+            'Salah satu contoh yang berupa judul yang akan tampil didalam title apaun coba ku tambahkan sehingga menjadi tiga baris mana kala sudah tiga baris, maka sudah selesai',
+        title:
+            'Salah satu contoh yang berupa judul yang akan tampil didalam title apaun coba ku tambahkan sehingga',
         id: '1',
         imageUrl: 'assets/images/gambar1.jpg',
         date: '10/11/2020',
@@ -19,8 +20,9 @@ class Beranda extends StatelessWidget {
         look: '123'),
     ArticleModels(
         content:
-            'gdgfhdgh fgfgfrdgfsgf hdgfdxgnfbvcxdgzfd dhdfgfg fgdfgfgf fgfgfg',
-        title: 'ini adalah article ke 2',
+            'Kenapa kalau textnya panjang apakah dia akan titik titik apakah betul mereka akan tidak tampil',
+        title:
+            'ini adalah article ke 2 merupakan judulnya yang mau dikasih panjang',
         id: '1',
         imageUrl: 'assets/images/gambar2.png',
         date: '11/11/2020',
@@ -42,7 +44,7 @@ class Beranda extends StatelessWidget {
             'gdgfhdgh fgfgfrdgfsgf hdgfdxgnfbvcxdgzfd dhdfgfg fgdfgfgf fgfgfg',
         title: 'article1',
         id: '1',
-        imageUrl: 'assets/images/gambar1.jpg',
+        imageUrl: 'assets/images/gambar4.png',
         date: '10/11/2020',
         author: 'admin',
         comment: '999',
@@ -72,8 +74,8 @@ class Beranda extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: 80,
+        const SizedBox(
+          height: 110,
         ),
         Expanded(
           child: Padding(
@@ -90,7 +92,8 @@ class Beranda extends StatelessWidget {
                       crossAxisCellCount: 6,
                       mainAxisCellCount: 6,
                       child: BlogCardStagered2(
-                        texSize: 14,
+                        isBigCard: true,
+                        texSize: 12,
                         article: articleAqidahPopuler[0],
                       ),
                     ),
@@ -98,7 +101,8 @@ class Beranda extends StatelessWidget {
                       crossAxisCellCount: 3,
                       mainAxisCellCount: 4,
                       child: BlogCardStagered2(
-                        texSize: 9,
+                        isBigCard: false,
+                        texSize: 10,
                         article: articleAqidahPopuler[1],
                       ),
                     ),
@@ -106,7 +110,8 @@ class Beranda extends StatelessWidget {
                       crossAxisCellCount: 3,
                       mainAxisCellCount: 4,
                       child: BlogCardStagered2(
-                        texSize: 9.0,
+                        isBigCard: false,
+                        texSize: 10.0,
                         article: articleAqidahPopuler[2],
                       ),
                     ),
@@ -114,7 +119,8 @@ class Beranda extends StatelessWidget {
                       crossAxisCellCount: 3,
                       mainAxisCellCount: 4,
                       child: BlogCardStagered2(
-                        texSize: 9,
+                        isBigCard: false,
+                        texSize: 10,
                         article: articleAqidahPopuler[1],
                       ),
                     ),
@@ -122,9 +128,58 @@ class Beranda extends StatelessWidget {
                       crossAxisCellCount: 3,
                       mainAxisCellCount: 4,
                       child: BlogCardStagered2(
-                        texSize: 9.0,
+                        isBigCard: false,
+                        texSize: 10.0,
                         article: articleAqidahPopuler[2],
                       ),
+                    ),
+                    StaggeredGridTile.count(
+                      crossAxisCellCount: 6,
+                      mainAxisCellCount: 6,
+                      child: BlogCardStagered2(
+                        isBigCard: true,
+                        texSize: 12,
+                        article: articleAqidahPopuler[0],
+                      ),
+                    ),
+                    StaggeredGridTile.count(
+                      crossAxisCellCount: 3,
+                      mainAxisCellCount: 4,
+                      child: BlogCardStagered2(
+                        isBigCard: false,
+                        texSize: 10,
+                        article: articleAqidahPopuler[1],
+                      ),
+                    ),
+                    StaggeredGridTile.count(
+                      crossAxisCellCount: 3,
+                      mainAxisCellCount: 4,
+                      child: BlogCardStagered2(
+                        isBigCard: false,
+                        texSize: 10.0,
+                        article: articleAqidahPopuler[2],
+                      ),
+                    ),
+                    StaggeredGridTile.count(
+                      crossAxisCellCount: 3,
+                      mainAxisCellCount: 4,
+                      child: BlogCardStagered2(
+                        isBigCard: false,
+                        texSize: 10,
+                        article: articleAqidahPopuler[1],
+                      ),
+                    ),
+                    StaggeredGridTile.count(
+                      crossAxisCellCount: 3,
+                      mainAxisCellCount: 4,
+                      child: BlogCardStagered2(
+                        isBigCard: false,
+                        texSize: 10.0,
+                        article: articleAqidahPopuler[2],
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
                     ),
                   ],
                 ),
@@ -203,10 +258,15 @@ class BlogCardStagered1 extends StatelessWidget {
 }
 
 class BlogCardStagered2 extends StatelessWidget {
-  const BlogCardStagered2(
-      {super.key, required this.article, required this.texSize});
+  const BlogCardStagered2({
+    super.key,
+    required this.article,
+    required this.texSize,
+    required this.isBigCard,
+  });
   final double texSize;
   final ArticleModels article;
+  final bool isBigCard;
 
   @override
   Widget build(BuildContext context) {
@@ -239,7 +299,7 @@ class BlogCardStagered2 extends StatelessWidget {
                     child: Text(
                       article.title,
                       textAlign: TextAlign.left,
-                      maxLines: 2,
+                      maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
@@ -267,67 +327,132 @@ class BlogCardStagered2 extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.only(
                         left: 5, top: 5, right: 10, bottom: 5),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          article.date,
-                          style: TextStyle(
-                            color: Colors.grey.shade700,
-                            fontSize: 9,
-                            fontStyle: FontStyle.italic,
+                    child: isBigCard
+                        ? Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                article.date,
+                                style: TextStyle(
+                                  color: Colors.grey.shade700,
+                                  fontSize: 9,
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  Row(
+                                    children: [
+                                      const Icon(
+                                        Icons.comment,
+                                        size: 14,
+                                        color: Colors.grey,
+                                      ),
+                                      Text(
+                                        article.comment,
+                                        style: TextStyle(
+                                          color: Colors.grey.shade700,
+                                          fontSize: 9,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    width: 2,
+                                  ),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      const Icon(
+                                        Icons.remove_red_eye_outlined,
+                                        size: 14,
+                                        color: Colors.grey,
+                                      ),
+                                      Text(
+                                        article.look,
+                                        style: TextStyle(
+                                          color: Colors.grey.shade700,
+                                          fontSize: 9,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    width: 2,
+                                  ),
+                                  const Icon(
+                                    Icons.screen_share_outlined,
+                                    size: 22,
+                                    color: Colors.blue,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          )
+                        : Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                article.date,
+                                style: TextStyle(
+                                  color: Colors.grey.shade700,
+                                  fontSize: 9,
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Row(
+                                    children: [
+                                      const Icon(
+                                        Icons.comment,
+                                        size: 14,
+                                        color: Colors.grey,
+                                      ),
+                                      Text(
+                                        article.comment,
+                                        style: TextStyle(
+                                          color: Colors.grey.shade700,
+                                          fontSize: 9,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    width: 2,
+                                  ),
+                                  Row(
+                                    crossAxisAlignment: CrossAxisAlignment.end,
+                                    children: [
+                                      const Icon(
+                                        Icons.remove_red_eye_outlined,
+                                        size: 14,
+                                        color: Colors.grey,
+                                      ),
+                                      Text(
+                                        article.look,
+                                        style: TextStyle(
+                                          color: Colors.grey.shade700,
+                                          fontSize: 9,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(
+                                    width: 2,
+                                  ),
+                                  const Icon(
+                                    Icons.screen_share_outlined,
+                                    size: 22,
+                                    color: Colors.blue,
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
-                        ),
-                        Row(
-                          children: [
-                            Row(
-                              children: [
-                                const Icon(
-                                  Icons.comment,
-                                  size: 14,
-                                  color: Colors.grey,
-                                ),
-                                Text(
-                                  article.comment,
-                                  style: TextStyle(
-                                    color: Colors.grey.shade700,
-                                    fontSize: 9,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 2,
-                            ),
-                            Row(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                const Icon(
-                                  Icons.remove_red_eye_outlined,
-                                  size: 14,
-                                  color: Colors.grey,
-                                ),
-                                Text(
-                                  article.look,
-                                  style: TextStyle(
-                                    color: Colors.grey.shade700,
-                                    fontSize: 9,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 2,
-                            ),
-                            const Icon(
-                              Icons.screen_share_outlined,
-                              size: 22,
-                              color: Colors.blue,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
                   )
                 ],
               ),

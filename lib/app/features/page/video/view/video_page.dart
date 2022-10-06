@@ -11,6 +11,10 @@ class VideoPage extends GetView<VideoController> {
   Widget build(BuildContext context) {
     final List<String> categoryVideo = [
       'Berik Said',
+      'Dzulqarnain',
+      'Khalid basalama',
+      'Firanda Andirja',
+      'Abdul Hakim',
     ];
     return Scaffold(
         body: Stack(

@@ -38,18 +38,19 @@ class CategoryHeader extends StatelessWidget {
                       color: selectedIndex == index
                           ? AppColor.secondary3
                           : AppColor.secondary1,
+                      fontSize: 12,
                     ),
                   ),
                   Container(
                     height: 2,
-                    width: 40,
+                    width: 50,
                     decoration: BoxDecoration(
                       color: selectedIndex == index
                           ? AppColor.secondary4
                           : Colors.transparent,
                       borderRadius: BorderRadius.circular(1),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

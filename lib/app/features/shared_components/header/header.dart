@@ -18,7 +18,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 12),
-      height: 70,
+      height: 100,
       decoration: const BoxDecoration(
         color: AppColor.colorHeaders,
         boxShadow: [
@@ -30,6 +30,7 @@ class Header extends StatelessWidget {
         ],
       ),
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           const LogoHeader(),
           Flexible(

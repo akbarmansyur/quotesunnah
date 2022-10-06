@@ -11,8 +11,12 @@ class LogoHeader extends StatelessWidget {
     return Flexible(
       flex: 1,
       child: Padding(
-        padding: const EdgeInsets.only(right: 5),
+        padding: const EdgeInsets.only(
+          right: 5,
+          bottom: 5,
+        ),
         child: Container(
+          height: 70,
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(AssetPath.logoPath),

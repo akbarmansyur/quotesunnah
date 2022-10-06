@@ -15,14 +15,12 @@ class HomePage extends GetView<HomePageController> {
   @override
   Widget build(BuildContext context) {
     final List<String> category = [
-      'Beranda',
-      'Contoh',
-      'Beberapa',
-      'category',
-      'Akan',
-      'Ditampilkan',
-      'Dari',
-      'Database',
+      'Populer',
+      'Tauhid',
+      'Aqidah',
+      'Manhaj',
+      'Fiqh',
+      'Sejarah',
     ];
     return Scaffold(
         body: Stack(
