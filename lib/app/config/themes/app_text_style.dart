@@ -1,12 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quotesunnah/app/config/themes/app_color.dart';
 
 class AppFont {
   static final fontBrand =
       GoogleFonts.oswald(fontWeight: FontWeight.w700, shadows: [
-    Shadow(
+    const Shadow(
       blurRadius: 1,
       color: Colors.black38,
       offset: Offset(1, 1),

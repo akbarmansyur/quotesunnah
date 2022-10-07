@@ -17,7 +17,7 @@ class TitleHeader extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           Container(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               top: 10,
             ),
             child: Text(
@@ -28,7 +28,7 @@ class TitleHeader extends StatelessWidget {
               ),
             ),
           ),
-          IconNotifHeader(),
+          const IconNotifHeader(),
         ],
       ),
     );

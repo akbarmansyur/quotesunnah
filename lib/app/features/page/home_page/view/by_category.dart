@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quotesunnah/app/features/shared_components/card/blog_card_1.dart';
 import 'package:quotesunnah/app/features/shared_components/card/blog_card_2.dart';
-import 'package:quotesunnah/app/features/shared_components/title/head_title.dart';
 import 'package:quotesunnah/app/models/article_models.dart';
 
 class ByCategory extends StatelessWidget {
@@ -42,7 +41,7 @@ class ByCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 80,
         ),
         Expanded(

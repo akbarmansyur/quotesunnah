@@ -20,7 +20,7 @@ class AppPages {
       page: () => const SplashScreen(),
       binding: SplashBinding(),
       curve: Curves.fastOutSlowIn,
-      transitionDuration: Duration(milliseconds: 600),
+      transitionDuration: const Duration(milliseconds: 600),
       transition: Transition.zoom,
     ),
     GetPage(
@@ -28,7 +28,7 @@ class AppPages {
       page: () => const HomeScreen(),
       binding: HomeBinding(),
       curve: Curves.fastOutSlowIn,
-      transitionDuration: Duration(milliseconds: 600),
+      transitionDuration: const Duration(milliseconds: 600),
       transition: Transition.zoom,
     ),
     GetPage(
@@ -36,7 +36,7 @@ class AppPages {
       page: () => const VideoDetailScreen(),
       binding: VideoDetailBinding(),
       curve: Curves.fastOutSlowIn,
-      transitionDuration: Duration(milliseconds: 600),
+      transitionDuration: const Duration(milliseconds: 600),
       transition: Transition.zoom,
     ),
   ];

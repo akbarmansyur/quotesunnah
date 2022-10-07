@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:quotesunnah/app/config/themes/app_color.dart';
 import 'package:quotesunnah/app/features/video_detail/video_detail_controller.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 

@@ -13,21 +13,21 @@ class IconNotifHeader extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 5),
           child: InkWell(
             onTap: () {},
-            child: Icon(
+            child: const Icon(
               Icons.notifications_outlined,
               color: AppColor.colorBrand,
               size: 20,
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 15,
         ),
         Padding(
           padding: const EdgeInsets.only(bottom: 5),
           child: InkWell(
             onTap: () {},
-            child: Icon(
+            child: const Icon(
               Icons.search,
               color: AppColor.colorBrand,
               size: 20,

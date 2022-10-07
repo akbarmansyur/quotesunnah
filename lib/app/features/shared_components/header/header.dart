@@ -17,7 +17,7 @@ class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 12),
       height: 100,
       decoration: const BoxDecoration(
         color: AppColor.colorHeaders,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:quotesunnah/app/config/themes/app_color.dart';
-import 'package:quotesunnah/app/features/shared_components/card/blog_card_1.dart';
 import 'package:quotesunnah/app/models/article_models.dart';
 
 class Beranda extends StatelessWidget {
@@ -178,7 +177,7 @@ class Beranda extends StatelessWidget {
                         article: articleAqidahPopuler[2],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                   ],
@@ -240,7 +239,7 @@ class BlogCardStagered1 extends StatelessWidget {
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.bold,
                         fontStyle: FontStyle.italic,
@@ -323,7 +322,7 @@ class BlogCardStagered2 extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Container(
                     padding: const EdgeInsets.only(
                         left: 5, top: 5, right: 10, bottom: 5),
